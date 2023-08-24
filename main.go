@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	fetchcmd "jagaad-backend-test/cmd/fetch"
+	readcmd "jagaad-backend-test/cmd/read"
 	"jagaad-backend-test/config"
 	"os"
 
@@ -13,7 +14,7 @@ func main() {
 	rootCmd := &cobra.Command{Long: "This is Jagaat Backend Test"}
 
 	rootCmd.AddCommand(fetchcmd.Command())
-	// rootCmd.AddCommand(searchCommand())
+	rootCmd.AddCommand(readcmd.Command())
 
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
