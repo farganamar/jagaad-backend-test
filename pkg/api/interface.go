@@ -5,6 +5,7 @@ import (
 	"jagaad-backend-test/entities"
 )
 
+//go:generate mockery --name IFetch --inpackage --case=underscore
 type IFetch interface {
 	FetchUsersFromAPI(conf config.Config) []entities.User
 }

@@ -5,6 +5,7 @@ import (
 	csvpkg "jagaad-backend-test/pkg/csv"
 )
 
+//go:generate mockery --name IFetchUseCase --inpackage --case=underscore
 type IFetchUseCase interface {
 	FetchAndSaveUsers() error
 }
